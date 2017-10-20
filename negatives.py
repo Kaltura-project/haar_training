@@ -22,9 +22,6 @@ def extract_noise():
         frame = cv2.imread(filestring)
         print(filestring, np.shape(frame))
         w = int(max(np.shape(frame)) / 10)
-        # w2 = int(w / 3)
-        # w -= w2
-        # while(w >= w2):
         for x in range(0, frame.shape[0], w):
             for y in range(0, frame.shape[1], w):
                 if x + w <= frame.shape[1] and y + w <= frame.shape[0]:
